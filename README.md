@@ -17,6 +17,10 @@ Hardware – PCs, Cyclone II , USB flasher
 **Theory**
 
 **Logic Diagram**
+Truth Table 1
+![image](https://github.com/user-attachments/assets/24e01215-cc95-4ca2-9556-065b8b3ea077)
+Truth Table 2
+![image](https://github.com/user-attachments/assets/6a5dd904-dce1-449d-b7c0-693680a0e538)
 
 **Procedure**
 
@@ -39,32 +43,30 @@ Developed by:SUBITHRA R
 
 RegisterNumber:212224110050
 ```
-module funct1(a,b,c,d,f1);
- input a,b,c,d;
- output f1;
- assign f1=((~b&~d)|(~a&b&d)|(a&b&~c));
- endmodule
+module EX2(a,b,c,d,f1);
+input a,b,c,d;
+output f1;
+assign f1=((~b&~d|a&b&~c|~a&b&d));
+endmodule
 
- module funct2(w,x,y,z,f2);
- input w,x,y,z;
- output f2;
- assign f2=((~y&z)|(w&y)|(x&y));
- endmodule
+module exp2(w,x,y,z,f2);
+input w,x,y,z;
+output f2;
+assign f2=((~y&z|x&y|w&y));
+endmodule 
 ```
 
 
 **RTL realization**
-![Screenshot 2025-04-15 113126](https://github.com/user-attachments/assets/f5bcceec-838d-48bc-b635-723cfe2373ce)
-
-
 **Output:**
+![image](https://github.com/user-attachments/assets/abce4c13-5598-4370-900f-3c381dbb6910)
+![image](https://github.com/user-attachments/assets/fac1cc00-3dd2-4edc-a0c7-0f7d1d9df52f)
 
-![Screenshot 2025-04-15 113155](https://github.com/user-attachments/assets/57e52143-c85e-4c85-9045-a6de7a7f91f9)
+**RTL**
+![image](https://github.com/user-attachments/assets/19072ca8-4b3f-4e5d-948a-9d1eb7379db1)
+![image](https://github.com/user-attachments/assets/04be55ea-4eb3-401d-bdfd-b46e941a0375)
 
 **Timing Diagram**
-
-![Screenshot 2025-04-15 113155](https://github.com/user-attachments/assets/57e52143-c85e-4c85-9045-a6de7a7f91f9) 
-
 
 **Result:**
 
